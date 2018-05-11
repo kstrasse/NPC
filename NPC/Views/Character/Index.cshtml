@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+
+@model NPC.Models.FifthEdCharacter;
+
+@{
+    Layout = "_Layout";
+}
+
+
+
+<h4 class="text-center">Character</h4>
+<form method="POST">
+
+
+    <div>
+        <select asp-for="selectedClassType" asp-items="Html.GetEnumSelectList<NPC.Logic.Classes.ClassTypes>()" class="btn btn-secondary dropdown-toggle" name="selectedClass"></select>
+       <label class="badge badge-primary">Level:</label>
+        <input asp-for="level" placeholder="1"/>
+        <label class="badge badge-primary">Proficiency Bonus</label>
+        <input asp-for="ProficiencyBonus" />
+        <button class="btn btn-primary">Save</button>
+    </div>
+
+    <form class="form-inline">
+        <label class="badge badge-primary col-sm-2" >Strength:</label>
+        <label class="badge badge-primary col-sm-2">Modifier:</label>
+        <div class="form-group">
+            <input asp-for="Strength.total" class="col-sm-2"/>
+            <input asp-for="Strength.modifier" class="col-sm-2"/>
+        </div>
+
+        <label class="badge badge-primary col-sm-2">Dexterity:</label>
+        <label class="badge badge-primary col-sm-2">Modifier:</label>
+        <div class="form-group">
+            <input asp-for="Dexterity.total" class="col-sm-2" />
+            <input asp-for="Dexterity.modifier" class="col-sm-2" />
+        </div>
+
+        <label class="badge badge-primary col-sm-2">Constitution:</label>
+        <label class="badge badge-primary col-sm-2">Modifier:</label>
+        <div class="form-group">
+            <input asp-for="Constitution.total" class="col-sm-2" />
+            <input asp-for="Constitution.modifier" class="col-sm-2" />
+        </div>
+
+        <label class="badge badge-primary col-sm-2">Intelligence:</label>
+        <label class="badge badge-primary col-sm-2">Modifier:</label>
+        <div class="form-group">
+            <input asp-for="Intelligence.total" class="col-sm-2"/>
+            <input asp-for="Intelligence.modifier" class="col-sm-2" />
+        </div>
+
+        <label class="badge badge-primary col-sm-2">Wisdom:</label>
+        <label class="badge badge-primary col-sm-2">Modifier:</label>
+        <div class="form-group">
+            <input asp-for="Wisdom.total" class="col-sm-2"/>
+            <input asp-for="Wisdom.modifier" class="col-sm-2"/>
+        </div>
+
+        <label class="badge badge-primary col-sm-2">Charisma:</label>
+        <label class="badge badge-primary col-sm-2">Modifier:</label>
+        <div class="form-group">
+            <input asp-for="Charisma.total" class="col-sm-2" />
+            <input asp-for="Charisma.modifier" class="col-sm-2" />
+        </div>
+    </form>
+    
+    <!--
+
+          <form>
+               <div></div>
+           </form>
+           <label class="badge badge-primary">Strength:</label>
+
+
+           <form class="form-inline">
+               <label asp-for="Strength.total" class="badge badge-secondary">Total:</label>
+               <div class="form-group">
+                   <input asp-for="Strength.total"id="StrengthTotal" class="col-sm-2" />
+                   <label asp-for="Strength.modifier" class="badge badge-secondary">Modifier:</label>
+                   <input asp-for="Strength.modifier" class="col-sm-2" />
+               </div>
+
+           </form>
+           <label class="badge badge-primary">Dexterity:</label>-->
+</form>
